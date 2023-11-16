@@ -1,12 +1,8 @@
-#include "Student.hpp"
-
-Student::Student() {}
+#include "../Include/Student.hpp"
 
 Student::Student(const std::string & firstName, 
-                 const std::string & lastName, 
+                 const std::string & surname, 
                  const std::string & pesel, 
-                 const Address & address,
-                 const std::string & indexNumber, 
-                 const Gender & gender) :
-    firstName_(firstName), lastName_(lastName), pesel_(pesel), address_(address), indexNumber_(indexNumber), gender_(gender) {}
+                 const std::string & indexNumber) :
+    firstName_(firstName), surname_(surname), pesel_(pesel), indexNumber_(indexNumber) {}
 
