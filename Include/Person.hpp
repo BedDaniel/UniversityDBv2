@@ -2,6 +2,7 @@
 
 #include <string>
 
+
 enum class Gender
 { 
     Male, 
@@ -21,11 +22,11 @@ public:
         makeToUpper();
     }
 
-    std::string getFirstName()   { return firstName_; }
-    std::string getLastName()    { return surname_; }
-    std::string getAddress()     { return address_;}
-    std::string getPesel()       { return pesel_; }
-    Gender getGender()           { return Gender::gender_; }
+    std::string getFirstName()  const { return firstName_; }
+    std::string getLastName()   const { return surname_; }
+    std::string getAddress()    const { return address_;}
+    std::string getPesel()      const { return pesel_; }
+    Gender getGender()          const { return gender_; }
     std::string getGenderToString() const;
 
     void setFirstName(const std::string & firstName)     { firstName_ = firstName; }
@@ -35,8 +36,8 @@ public:
     void setIndexNumber(const std::string & indexNumber) { indexNumber_=indexNumber;}
     void setGender();
 
-    virtual size_t getEarnings() = 0;
-    virtual size_t getIndexNumber() = 0;
+    virtual size_t getEarnings() const = 0;
+    virtual size_t getIndexNumber() const = 0;
     virtual void setEarnings(const size_t & earnings) = 0;
 
 protected:
