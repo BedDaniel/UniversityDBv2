@@ -40,6 +40,9 @@ public:
     virtual size_t getIndexNumber() const = 0;
     virtual void setEarnings(const size_t & earnings) = 0;
 
+    friend std::ostream &operator<<(std::ostream &os, Student &student);
+    bool operator==(const Person &other) override;
+
 protected:
     std::string firstName_;
     std::string surname_;
